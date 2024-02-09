@@ -1,0 +1,89 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Pets",
+    "dateExported": "2024-02-09T16:20:40.487Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "2ca6ac73-7492-42f1-9060-38c04c7a01ef",
+            "colId": "ad93ca51-8d8e-4841-9fd2-9712eafe3678",
+            "containerId": "",
+            "name": "petsPost",
+            "url": "http://localhost:3000/api/pet",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-09T14:47:47.705Z",
+            "modified": "2024-02-09T16:11:49.825Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\":\"El nombre es obligatorio\",\n  \"tipo\":\"El tipo es obligatorio\",\n  \"edad\":\"La edad es obligatoria\",\n  \"sexo\":\"El sexo es obligatorio\",\n  \"desc\":\"La descripcion es obligatoria\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8ac9e404-6ed9-4aa2-bb0b-65b882da9991",
+            "colId": "ad93ca51-8d8e-4841-9fd2-9712eafe3678",
+            "containerId": "",
+            "name": "petsGet",
+            "url": "http://localhost:3000/api/pet",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-09T14:47:57.534Z",
+            "modified": "2024-02-09T16:01:48.472Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "cbbaf349-6b57-4143-9ae9-40b2fe2252dd",
+            "colId": "ad93ca51-8d8e-4841-9fd2-9712eafe3678",
+            "containerId": "",
+            "name": "getPetsById",
+            "url": "http://localhost:3000/api/pet/65c64ff9f1872e1a8dae25c5",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-09T14:48:10.214Z",
+            "modified": "2024-02-09T16:17:24.948Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "23fc4e1f-2f28-44c8-b1b3-eea144a89900",
+            "colId": "ad93ca51-8d8e-4841-9fd2-9712eafe3678",
+            "containerId": "",
+            "name": "petsPut",
+            "url": "http://localhost:3000/api/pet/65c64ff9f1872e1a8dae25c5",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-02-09T14:48:25.274Z",
+            "modified": "2024-02-09T16:17:30.591Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombre\": \"BingoFlash\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "b3961f91-206d-429c-ac81-e94429a6119e",
+            "colId": "ad93ca51-8d8e-4841-9fd2-9712eafe3678",
+            "containerId": "",
+            "name": "petsDelete",
+            "url": "http://localhost:3000/api/pet/65c64ff9f1872e1a8dae25c5",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-02-09T14:48:37.554Z",
+            "modified": "2024-02-09T16:17:38.155Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

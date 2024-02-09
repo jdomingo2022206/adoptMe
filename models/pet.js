@@ -1,4 +1,3 @@
-const { Int32 } = require('mongodb');
 const { Schema, model} = require('mongoose');
 
 const PetSchema = Schema ({
@@ -11,8 +10,16 @@ const PetSchema = Schema ({
         required: [true, 'El tipo es obligatorio']
     },
     edad: {
-        type: Int32,
+        type: String,
         required: [true, 'La edad es obligatoria, puede ser aproximada']
+    },
+    sexo: {
+        type: String,
+        required: [true, 'El sexo es obligatorio']
+    },
+    desc: {
+        type: String,
+        required: [true, 'La descripcion es obligatoria(adopatdo, huerfano, lastimado, etc)']
     },
     img:{
         type: String

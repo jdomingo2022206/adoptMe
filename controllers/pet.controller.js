@@ -6,7 +6,7 @@ const PetsGet = async (req, res = response ) => {
     const { limite, desde } = req.query;
     const query = { estado: true};
 
-    const [total, Pets] = await Promise.all([
+    const [total, pets] = await Promise.all([
         Pet.countDocuments(query),
         Pet.find(query)
         .skip(Number(desde))
@@ -15,16 +15,16 @@ const PetsGet = async (req, res = response ) => {
 
     res.status(200).json({
         total,
-        Pets
+        pets
     });
 } 
 
 const getPetByid = async (req, res) => {
     const { id } = req.params;
-    const Pet = await Pet.findOne({_id: id});
+    const pet = await Pet.findOne({_id: id});
 
     res.status(200).json({
-        Pet
+        pet
     });
 }
 
@@ -34,11 +34,11 @@ const PetsPut = async (req, res) => {
 
     await Pet.findByIdAndUpdate(id, resto);
 
-    const Pet = await Pet.findOne({_id: id});
+    const pet = await Pet.findOne({_id: id});
 
     res.status(200).json({
         msg: 'Pet Actualizado exitosamente',
-        Pet
+        pet
     })
 }
 
@@ -46,21 +46,21 @@ const PetsDelete = async (req, res) => {
     const {id} = req.params;
     await Pet.findByIdAndUpdate(id,{estado: false});
 
-    const Pet = await Pet.findOne({_id: id});
+    const pet = await Pet.findOne({_id: id});
 
     res.status(200).json({
         msg: 'Pet eliminado exitosamente',
-        Pet
+        pet
     });
 }
 
 const PetsPost = async (req, res) =>{
-    const { nombre, tipo, edad } = req.body;
-    const Pet = new Pet({nombre, tipo, edad});
+    const { nombre, tipo, edad, sexo, desc } = req.body;
+    const pet = new Pet({nombre, tipo, edad, sexo, desc});
 
-    await Pet.save();
+    await pet.save();
     res.status(200).json({
-        Pet
+        pet
     });
 }
 

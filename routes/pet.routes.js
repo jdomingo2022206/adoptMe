@@ -41,6 +41,8 @@ router.post(
         check("nombre","El nombre es obligatorio").not().isEmpty(),
         check("tipo","El tipo es obligatorio").not().isEmpty(),
         check("edad","La edad es obligatoria").not().isEmpty(),
+        check("sexo","El sexo es obligatorio").not().isEmpty(),
+        check("desc","La descripcion es obligatoria").not().isEmpty(),
         validarCampos,
     ], PetsPost); 
 
